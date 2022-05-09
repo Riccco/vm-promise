@@ -1,6 +1,8 @@
 # vm-promise 异步视图工具
   一个异步视图工具,使用该工具后无需关心数据的变化,我会在合适的时机返回给你
 
+`npm install vm-promise`
+
 # 使用前
 
 ```Vue

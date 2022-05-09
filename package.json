@@ -1,5 +1,5 @@
 {
-  "name": "vm-promise",
+  "name": "vm-promise-docs",
   "version": "2.0.0",
   "private": true,
   "scripts": {
@@ -7,12 +7,13 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "package": "vue-cli-service build --target lib ./plugins --name vm-promise --dest vm-promise"
+    "package": "vue-cli-service build --target lib ./src/plugins/index.js --name vm-promise --dest vm-promise"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "element-ui": "^2.15.8",
     "register-service-worker": "^1.7.1",
+    "vm-promise": "^2.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

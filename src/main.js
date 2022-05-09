@@ -8,7 +8,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
-import vmPromise from "./plugins";
+import vmPromise from "vm-promise";
 Vue.use(vmPromise)
 
 Vue.config.productionTip = false
