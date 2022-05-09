@@ -14,11 +14,8 @@
 
 <script>
 import { Loading } from 'element-ui';
-import vmPromise from "@/plugins/vm-promise";
+
 export default {
-  components:{
-    vmPromise
-  },
   data() {
     return {
       fullscreenLoading: false,

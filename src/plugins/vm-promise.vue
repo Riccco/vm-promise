@@ -57,12 +57,6 @@ export default {
     pending(newVal){
       if(newVal)this.$emit('vm-promise-pending',)
     },
-    data(newVal){
-       if(newVal)this.$emit('vm-promise-resolve',this.data)
-    },
-    rejected(newVal){
-      if(newVal)this.$emit('vm-promise-reject',)
-    },
   },
   methods:{
     isPromise(fun){
@@ -84,11 +78,12 @@ export default {
       console.log('运行')
       this.pending = true
       fun.then((r) => {
+        this.$emit('vm-promise-resolve',this.data)
         this.pending = null
         this.data = r
         console.log(r)
       }).catch((error) => {
-        console.log(error)
+        this.$emit('vm-promise-reject',error)
         this.pending = null
         this.rejected = true
       })
