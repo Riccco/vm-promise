@@ -2,7 +2,10 @@
 <div>
 
 
-   <vm-promise @vm-promise-resolve="resolve" showModel="skeleton" :promiseData="promiseData" @vm-promise-pending="pending">
+   <vm-promise :promiseData="promiseData">
+      <template #pending>
+        111
+      </template>
       <template #data>
           <div class="h1-type">加载成功</div>
       </template>
@@ -38,12 +41,11 @@ export default {
         },2000)
       })
     }
-    this.promiseData = getTest('resolve')
+    // this.promiseData = getTest('resolve')
+    this.promiseData = [getTest('resolve')]
   },
+
   methods: {
-    pending(){
-      Loading.service();
-    },
     resolve(r){
       console.log(r)
       let loadingInstance = Loading.service();
@@ -55,10 +57,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .h1-type{
-    color: pink;
-    font-size: 30px;
-  }
-</style>

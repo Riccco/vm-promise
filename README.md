@@ -67,8 +67,8 @@ export default {
 * `resolve` : `<template #data="data">` : 当数据为pending状态时你可以做些什么并返回一个return的参数
 * `resolve` : `<template #resolve>` : 当数据为resolve状态时你可以做些什么
 * `@vm-promise-pending` : 一个pending的回调 无参数
-* `@vm-promise-resolve` : 一个pending的回调 返回一个data
-* `@vm-promise-reject`  : 一个pending的回调 返回一个error
+* `@vm-promise-resolve` : 一个resolve的回调 返回一个data
+* `@vm-promise-reject`  : 一个reject的回调 返回一个error
 
 # 使用案例
 
